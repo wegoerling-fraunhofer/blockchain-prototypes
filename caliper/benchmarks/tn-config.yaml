@@ -1,0 +1,62 @@
+realEstateArgs: &real-estate-args
+  propertyName: &property-name "property1"
+  address: "123 tree st"
+  propSize: "35"
+  cost: "500000"
+  owner: "tom"
+  address2: &address-2 "Apt 001"
+  numberOfProperties: &number-of-properties 1000
+
+assetArgs: &asset-args
+  manufacturer: "fraunhofer"
+  partNumber: &part-number "p00"
+  components: "001"
+  batchItem: &batch-item ",fraunhofer,p00,[];"
+  numberOfAssets: &number-of-assets 100
+  numberOfBatches: &number-of-batches 10
+
+test:
+  name: development-project
+  description: >-
+    This is an example benchmark for Caliper, to test the backend DLT's
+    performance with simple address transactions.
+  workers:
+    type: local
+    number: 1
+  rounds:
+    - label: createComplexAsset
+      description: >-
+        Test description for the opening of an account through the deployed
+        contract.
+      txNumber: *number-of-assets
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: caliper/benchmarks/createAsset.js
+        arguments: *asset-args
+    - label: createComplexAssetBatch
+      description: >-
+        Test description for the opening of an account through the deployed
+        contract.
+      txNumber: *number-of-batches
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: caliper/benchmarks/createAssetBatch.js
+        arguments: *asset-args
+    - label: AssembleComplexAsset
+      description: >-
+        Test description for the opening of an account through the deployed
+        contract.
+      txNumber: *number-of-assets
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: caliper/benchmarks/createComplexAsset.js
+        arguments: *asset-args

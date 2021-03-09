@@ -1,0 +1,30 @@
+POST http://localhost:3000/assets/000
+{"manufactuer":"Fraunhofer","partNumber":"p00"}
+POST http://localhost:3000/assets/001
+{"manufactuer":"Fraunhofer","partNumber":"p00"}
+POST http://localhost:3000/assets/002
+{"manufactuer":"Fraunhofer","partNumber":"p00"}
+POST http://localhost:3000/assets/003/assemble
+{"manufactuer":"Fraunhofer","partNumber":"p00","components":"000,001"}
+POST http://localhost:3000/assets/
+{"batch":"004,Fraunhofer,p00,[];005,Fraunhofer,p01,[002.003]"}
+POST http://localhost:3000/assets/000/authenticate
+{"manufactuer":"Fraunhofer","nonce":"0","chipResponse":"0"}
+POST http://localhost:3000/assets/000/authenticate
+{"manufactuer":"Fraunhofer","nonce":"0","chipResponse":"1"}
+PUT http://localhost:3000/assets/001
+{"manufactuer":"Fraunhofer","partNumber":"p01","components":""}
+PUT http://localhost:3000/assets/001/retire
+{}
+GET http://localhost:3000/assets/000
+{}
+GET http://localhost:3000/assets/000/components
+{}
+GET http://localhost:3000/assets/000/containment
+{}
+GET http://localhost:3000/assets
+{}
+DELETE http://localhost:3000/assets/000
+{}
+DELETE http://localhost:3000/assets
+{"batch":"001,002,003,004,005"}

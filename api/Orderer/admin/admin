@@ -1,0 +1,13 @@
+{
+    "name":"admin",
+    "mspid":"OrdererMSP",
+    "roles":null,
+    "affiliation":"",
+    "enrollmentSecret":"",
+    "enrollment":{
+        "signingIdentity":"2892ce2a935663a616fbaaf7fee241eccf6f81f7d95e5a651a8db3740ed5124a",
+        "identity":{
+            "certificate":"-----BEGIN CERTIFICATE-----\nMIICXDCCAgKgAwIBAgIUcJJckYJ3IQIlocRbUwNs9y5gybIwCgYIKoZIzj0EAwIw\nfzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh\nbiBGcmFuY2lzY28xHzAdBgNVBAoTFkludGVybmV0IFdpZGdldHMsIEluYy4xDDAK\nBgNVBAsTA1dXVzEUMBIGA1UEAxMLZXhhbXBsZS5jb20wHhcNMjAxMjE3MTUyMTAw\nWhcNMjExMDExMTkzMTAwWjBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGgg\nQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZjbGllbnQx\nDjAMBgNVBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExwS3Ya+Q\n4zbeTYAD+0ED0+YmRdaWyoAaf1d0jtKbC+41ClcZBPRdeEazzgHKdogl+aSMKmvr\nflAchjdxqQVRbaN+MHwwDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwHQYD\nVR0OBBYEFJK6/Yh5IjySGmv78yJmq5BcfRWKMB8GA1UdIwQYMBaAFBdnQj2qnoI/\nxMUdn1vDmdG1nEgQMBwGA1UdEQQVMBOCEW1pa2UtT3B0aVBsZXgtNzgwMAoGCCqG\nSM49BAMCA0gAMEUCIQCZ82Fbb+jRdJEk5aLIYdMHcS452Ai5LgBQcr8hkk5mfAIg\nFpzmIF+0oZzec54rmdZkYzOdipZplIB9n4rq9vc2+MU=\n-----END CERTIFICATE-----"
+        }
+    }
+}
